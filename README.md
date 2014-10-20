@@ -11,9 +11,13 @@ Quick guide to install:
 4)php app/console doctrine:fixtures:load
 
 Predefined user:
+
 login: admin
+
 pass: 123456
+
 (Use this credentials for login form)
+
 
 5) for unit tests run:
 phpunit -c app
