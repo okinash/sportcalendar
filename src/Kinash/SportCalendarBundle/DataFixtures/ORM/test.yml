@@ -1,0 +1,20 @@
+Kinash\SportCalendarBundle\Entity\User:
+    user0:
+        username: admin
+        password: 123456
+        email: admin@admin.com
+        salt: <md5()>
+    user{1..3}:
+        username (unique): <username()>
+        password: <word()>
+        email: <email()>
+        salt: <md5()>
+
+Kinash\SportCalendarBundle\Entity\Exercise:
+    exercise{1..400}:
+        description:  <randomElement(array('Arnold Dumbbell Press','Wide-Grip Pulldown Behind The Neck','Press a Bar','Incline Hammer Curls','Smith Machine Bent Over Row','Decline EZ Bar Triceps Extension'))>
+        weight: <randomFloat(1,20,200)>
+        count:  <numberBetween(5,15)>
+        user: @user*
+        date: <dateTimeBetween('-30 days', 'now + 1days')>
+        time: <dateTimeBetween('-1 days', 'now')>

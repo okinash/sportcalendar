@@ -1,0 +1,10 @@
+{% if items is iterable %}
+    <ul>
+        {% for item in items %}
+            <li>
+                {{ item.description }}        <span style="float: right">{{ item.weight }} {{ 'list.kg'|trans() }} x {{item.count}}</span>
+            </li>
+        {% endfor %}
+
+    </ul>
+{% endif %}

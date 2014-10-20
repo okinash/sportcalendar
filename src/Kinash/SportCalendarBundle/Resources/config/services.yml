@@ -1,0 +1,9 @@
+parameters:
+    sport_calendar.exercise.repository.class: Kinash\SportCalendarBundle\Entity\ExerciseRepository
+services:
+    sport_calendar_repo_exercises:
+        class: %sport_calendar.exercise.repository.class%
+        arguments: [@doctrine.orm.entity_manager]
+    sport_calendar_service:
+        class: Kinash\SportCalendarBundle\Service\SportCalendar
+        arguments: [@sport_calendar_repo_exercises]

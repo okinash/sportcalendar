@@ -1,0 +1,26 @@
+<h1>{{ 'header.greating' | trans() }}</h1>
+<h3>{% trans %}header.text{% endtrans %}</h3>
+<table width="100%" border="1" cellpadding="10">
+<tr>
+    <td align="center">
+        <h3>{{ 'table.title.2weeks' | trans()}}</h3>
+    </td>
+    <td align="center">
+        <h3>{{ 'table.title.1week' | trans()}}</h3>
+    </td>
+    <td align="center">
+        <h3>{{ 'table.title.today' | trans()}}</h3>
+    </td>
+</tr>
+<tr>
+    <td style="vertical-align: top;">
+        {{blockTwoWeeksAgo|raw}}
+    </td>
+    <td style="vertical-align: top;">
+        {{blockWeekAgo|raw}}
+    </td>
+    <td style="vertical-align: top;">
+        {{blockToday|raw}}
+    </td>
+</tr>
+</table>
